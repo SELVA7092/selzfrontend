@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    gap: 100px;
+    .footerview {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .aboutus {
+            font-weight: 500;
+        }
+        div {
+            cursor: pointer;
+        }
+    }
+}
+
+.copyrig {
+    margin: 30PX;
+    display: flex;
+    justify-content: center;
+}

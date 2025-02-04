@@ -1,0 +1,51 @@
+hr {
+    height: 5px;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    .productview {
+        width: 80vw;
+        display: flex;
+        justify-content: center;
+        .productleft {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            img {
+                height: 80%;
+                width: 60%;
+            }
+        }
+        .productright {
+            flex: 1;
+        }
+    }
+   
+}
+
+.porname {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px 0px 10px 0px;
+}
+
+.pordes {
+    font-size: 30px;
+    color: rgb(105, 104, 104);
+}
+
+.VIEWALLSHADE {
+    margin: 20px 0px 20px 0px;
+    span {
+        border-radius: 5px;
+        border: 2px solid black;
+        padding: 10px;
+    }
+}
+
+.porpri {
+    display: flex;
+    flex-direction: column;
+}

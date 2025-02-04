@@ -1,0 +1,88 @@
+.main-slider {
+    display: flex;
+    justify-content: center;
+    .slider {
+        width: 70vw;
+        img {
+            // width: 100%;
+        }
+    }
+}
+
+
+
+.listview {
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    font-weight: 700;
+}
+
+.listviewcontent {
+    padding: 18px;
+    border-style: groove;
+    border-color: #000000;
+}
+
+.listviewcontent:hover {
+    color: rgba(255, 4, 4, 0.975);
+    cursor: pointer;
+}
+
+.main {
+    justify-content: center;
+    
+}
+
+.ShopByBrands {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    margin: 70px;
+}
+
+.brandslist {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+    img {
+        border-style: groove;
+        border-color: black;
+        width: 200px;
+    }
+}
+
+#main-slider {
+    margin: 50px;
+}
+
+.footer {
+    display: flex;
+    gap: 100px;
+    .footerview {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .aboutus {
+            font-weight: 500;
+        }
+        div {
+            cursor: pointer;
+        }
+    }
+}
+
+
+.SwiperSlideproduct{
+    
+    text-decoration: none;
+    .SwiperSlideproductlist{
+         color: black;
+        
+    }
+    :hover{
+       background-color: rgb(240, 240, 240);
+    }
+}
