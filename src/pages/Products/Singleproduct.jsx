@@ -1,6 +1,4 @@
 import Navbar from "../Home/Navbar/Navbar.jsx";
-//import { prodetail } from "../assets/swiperpro.jsx";
-
 import Footer from "../Home/Footer/Footer.jsx";
 import "./Singleproduct.scss";
 import { useParams } from "react-router-dom";

@@ -19,6 +19,7 @@ import { Value } from 'sass';
 
 function Navbar() {
 
+  const [searchResults, setSearchResults] = useState([]);
   const [cookies, setCookie, removeCookie] = useCookies()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -65,10 +66,24 @@ function Navbar() {
   }
 
 
-  const serchview=(value)=>{
-    console.log(value);
+  const searchView = async (value) => {
+    if(value==''){
+      setSearchResults([]);  
+    }else{
+      try {
+          let response = await axios.get(`http://localhost:8888/search/searchitem/${value}`);
 
-  }
+          if (response.status === 200) {
+              setSearchResults(response.data);
+             
+          } else {
+              console.error('Request failed with status: ' + response.status);
+          }
+      } catch (e) {
+          console.error('Error during the search request:', e);
+      }
+    }
+};
 
     return (
       <div className="bodytag">
@@ -149,14 +164,15 @@ function Navbar() {
                 <p>SELZ</p>
                 <div className="searchframe">
                    <div className="search-box">
-                      <input type="text" placeholder='search hear...' onChange={e=>serchview(e.target.value)}/>
+                      <input type="text" placeholder='search hear...' onChange={e=>searchView(e.target.value)}/>
                    </div>
-                   {/* <div className="search-result">
-                     <div>A</div>
-                     <div>A</div>
-                     <div>A</div>
-                     <div>A</div>
-                   </div> */}
+                   <div className="search-result">
+                       {Array.isArray(searchResults) && searchResults.map((data, index) => (
+                              <Link to={`/product/SearchList/${data}`}>
+                             <div className="search-resultitem" key={index}>{data}</div>
+                             </Link>
+                             ))}
+                    </div>
                 </div>   
              </div>
 

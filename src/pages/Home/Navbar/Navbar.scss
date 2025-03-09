@@ -74,13 +74,21 @@
         width: 200px;
         padding: 1px 15px;
         position:absolute;
-        div{
+        z-index: 10;
+        a{ 
+            text-decoration: none;
+            color: black;
+            div{
             font-size: 12px;
             cursor: pointer;
             padding: 8px 15px;
-            background-color: rgb(157, 158, 158);
+            background-color: rgb(245, 247, 247);
             border-color: black;
             border-style:  solid;
+            &:hover{
+                background-color: rgb(158, 160, 160);
+            }
+            }
         }
 
     }
